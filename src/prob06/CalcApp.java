@@ -31,24 +31,27 @@ public class CalcApp {
 }
 	public static int calculator(int a,int b,String op ){
 		int result=0;
+		Calculate c;
+
+		
 		switch(op){
-			case "+" : Add add = new Add();
-						add.setValue(a,b);
-						result=add.calculate();
+			case "+" :c=new Add();
+						c.setValue(a, b);
+						result=c.calculate();
 						break;
-			case "-": Sub sub = new Sub();
-						sub.setValue(a,b);
-						result=sub.calculate();
+			case "-": c=new Sub();
+						c.setValue(a, b);
+						result=c.calculate();
 						break;
-			case "*":  Mul mul = new Mul();
-						mul.setValue(a,b);
-						result=mul.calculate();
+			case "*":  c= new Mul();
+					c.setValue(a, b);
+						result=c.calculate();
 						break;
-			case "/":  Div div = new Div();
-						div.setValue(a,b);
-						result=div.calculate();
+			case "/":  c= new Div();
+						c.setValue(a, b);
+						result=c.calculate();
 						break;
-			default : break;
+			default: break;
 		}
 		return result;
 	}
